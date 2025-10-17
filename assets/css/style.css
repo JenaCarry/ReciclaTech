@@ -144,17 +144,18 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 100%;
+  border-radius: 50%;
   color: var(--light-text-color);
   font-size: 14px;
   font-weight: 700;
+  flex-shrink: 0;
 }
 
 .stats {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
+  justify-content: space-around;
+  gap: 20px;
   background-color: var(--box-background-color);
   text-align: center;
   padding: 32px 20px;
@@ -166,9 +167,6 @@ main {
 }
 
 .how-it-works {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 0 12px;
 }
 .how-it-works h2 {
@@ -185,27 +183,44 @@ main {
 .how-it-works p {
   margin-bottom: 32px;
 }
-.how-it-works article {
+.how-it-works .card-how-it-works {
   background-color: var(--box-background-color);
   border-radius: 8px;
   padding: 28px 20px;
 }
-.how-it-works article h3 {
+.how-it-works .card-how-it-works .title-how-it-works {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 32px;
 }
-.how-it-works article .circle-number {
-  background-color: var(--primary-button-color);
+.how-it-works .card-how-it-works .title-how-it-works h3 {
+  margin: 0;
 }
-.how-it-works article ul {
+.how-it-works .card-how-it-works ul {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.how-it-works article ul .circle-number {
+.how-it-works .card-how-it-works ul li {
+  display: flex;
+  gap: 10px;
+}
+.how-it-works .card-how-it-works ul .circle-number {
   margin-bottom: 4px;
 }
-.how-it-works article ul p {
+.how-it-works .card-how-it-works ul p {
   margin: 0;
+}
+.how-it-works .donors h3 {
+  color: var(--primary-button-color);
+}
+.how-it-works .donors .circle-number {
+  background-color: var(--primary-button-color);
+}
+.how-it-works .acquirers h3 {
+  color: var(--number-circle-color);
+}
+.how-it-works .acquirers .circle-number {
+  background-color: var(--number-circle-color);
 }/*# sourceMappingURL=style.css.map */
