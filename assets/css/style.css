@@ -212,6 +212,9 @@ main {
 .how-it-works .card-how-it-works ul p {
   margin: 0;
 }
+.how-it-works .donors {
+  margin-bottom: 32px;
+}
 .how-it-works .donors h3 {
   color: var(--primary-button-color);
 }
