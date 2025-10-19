@@ -13,150 +13,278 @@
         <title>ReciclaTech</title>
     </head>
     <body>
-        <header>
+        <header class="header">
             <a href="/" class="logo">
-                <img src="assets/images/logo.png" alt="Logo da ReciclaTech" />
+                <img
+                    class="logo__image"
+                    src="assets/images/logo.png"
+                    alt="Logo da ReciclaTech"
+                />
                 ReciclaTech
             </a>
-            <nav class="nav-container">
-                <ul class="nav-list">
-                    <li>
-                        <a href="#como-funciona">Como funciona?</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="#como-funciona">
+                            Como funciona?</a
+                        >
                     </li>
-                    <li>
-                        <a href="#">Doar</a>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Doar</a>
                     </li>
-                    <li>
-                        <a href="#">Adquirir</a>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Adquirir</a>
                     </li>
                 </ul>
-                <button class="btn-primary">Começar agora</button>
+                <button class="btn btn--primary">Começar agora</button>
             </nav>
-            <div class="line"></div>
+            <div class="header__line"></div>
         </header>
 
-        <main>
+        <main class="main">
             <section class="hero">
-                <h1>Dê uma segunda vida aos seus eletrônicos!</h1>
-                <h4>
+                <h1 class="title hero__title">
+                    Dê uma segunda vida aos seus eletrônicos!
+                </h1>
+                <h2 class="hero__description">
                     Conectamos pessoas que querem doar eletrônicos em bom estado
                     com quem precisa deles. Simples, gratuito e sustentável!
-                </h4>
-                <div class="buttons-container">
-                    <button class="btn-primary">
+                </h2>
+                <div class="hero__button-group">
+                    <button class="btn btn--primary">
                         Quero doar
                         <img
-                            class="icon"
+                            class="btn__icon"
                             src="assets/images/icons/white-gift.png"
                             alt="Ícone de presente"
                         />
                     </button>
-                    <button class="btn-secondary">
+                    <button class="btn btn--secondary">
                         Como Adquirir
                         <img
-                            class="icon"
+                            class="btn__icon"
                             src="assets/images/icons/blue-heart.png"
                             alt="Ícone coração azul"
                         />
                     </button>
                 </div>
                 <img
-                    class="recicla-image"
+                    class="hero__image"
                     src="assets/images/reciclagem.png"
                     alt="Circuito de reciclagem"
                 />
             </section>
 
             <section class="stats">
-                <div>
-                    <h2>2.5k+</h2>
-                    <p>Eletrônicos doados</p>
+                <div class="stats__item">
+                    <h2 class="title stats__number">2.5k+</h2>
+                    <p class="stats__description">Eletrônicos doados</p>
                 </div>
-                <div>
-                    <h2>1.8k+</h2>
-                    <p>Famílias beneficiadas</p>
+                <div class="stats__item">
+                    <h2 class="title stats__number">1.8k+</h2>
+                    <p class="stats__description">Famílias beneficiadas</p>
                 </div>
-                <div>
-                    <h2>95%</h2>
-                    <p>Satisfação dos usuários</p>
+                <div class="stats__item">
+                    <h2 class="title stats__number">95%</h2>
+                    <p class="stats__description">Satisfação dos usuários</p>
                 </div>
             </section>
 
             <section id="como-funciona" class="how-it-works">
-                <h2>Como funciona?</h2>
-                <h3>É mais fácil que trocar a pilha do controle!</h3>
+                <h2 class="title how-it-works__title">Como funciona?</h2>
+                <h3 class="subtitle how-it-works__subtitle">
+                    É mais fácil que trocar a pilha do controle!
+                </h3>
 
-                <article class="card-how-it-works donors">
-                    <div class="title-how-it-works">
+                <article class="guide guide--donors">
+                    <div class="guide__heading">
                         <img
+                            class="guide__icon"
                             src="assets/images/icons/donors.png"
                             alt="Doadores"
                         />
-                        <h3>Para Doadores</h3>
+                        <h3 class="subtitle guide__title guide__title--donors">
+                            Para Doadores
+                        </h3>
                     </div>
-
-                    <p>Transforme seu "lixo eletrônico" no tesouro de alguém</p>
-                    <ul>
-                        <li>
-                            <span class="circle-number">1</span>
-                            <div>
-                                <h4>Cadastre seu eletrônico</h4>
-                                <p>
+                    <p class="guide__description">
+                        Transforme seu "lixo eletrônico" no tesouro de alguém
+                    </p>
+                    <ul class="guide__list">
+                        <li class="guide__item">
+                            <span class="guide__number guide__number--donors">
+                                1
+                            </span>
+                            <div class="guide__content">
+                                <h4 class="guide__content-title">
+                                    Cadastre seu eletrônico
+                                </h4>
+                                <p class="guide__content-description">
                                     Tire umas fotos, descreva o estado e pronto!
                                 </p>
                             </div>
                         </li>
-                        <li>
-                            <span class="circle-number">2</span>
-                            <div>
-                                <h4>Aguarde o match</h4>
-                                <p>Alguém vai se interessar pelo seu item</p>
+                        <li class="guide__item">
+                            <span class="guide__number guide__number--donors">
+                                2
+                            </span>
+                            <div class="guide__content">
+                                <h4 class="guide__content-title">
+                                    Aguarde o match
+                                </h4>
+                                <p class="guide__content-description">
+                                    Alguém vai se interessar pelo seu item
+                                </p>
                             </div>
                         </li>
-                        <li>
-                            <span class="circle-number">3</span>
-                            <div>
-                                <h4>Combine a entrega</h4>
-                                <p>Vocês decidem como fazer a entrega</p>
+                        <li class="guide__item">
+                            <span class="guide__number guide__number--donors">
+                                3
+                            </span>
+                            <div class="guide__content">
+                                <h4 class="guide__content-title">
+                                    Combine a entrega
+                                </h4>
+                                <p class="guide__content-description">
+                                    Vocês decidem como fazer a entrega
+                                </p>
                             </div>
                         </li>
                     </ul>
                 </article>
 
-                <article class="card-how-it-works acquirers">
-                    <div class="title-how-it-works">
+                <article class="guide guide--acquirers">
+                    <div class="guide__heading">
                         <img
+                            class="guide__icon"
                             src="assets/images/icons/acquirers.png"
                             alt="Doadores"
                         />
-                        <h3>Para Adquirentes</h3>
+                        <h3
+                            class="subtitle guide__title guide__title--acquirers"
+                        >
+                            Para Adquirentes
+                        </h3>
                     </div>
-
-                    <p>Encontre o eletrônico dos seus sonhos de graça</p>
-                    <ul>
-                        <li>
-                            <span class="circle-number">1</span>
-                            <div>
-                                <h4>Explore os itens</h4>
-                                <p>Navegue pelos eletrônicos disponíveis</p>
+                    <p class="guide__description">
+                        Encontre o eletrônico dos seus sonhos de graça
+                    </p>
+                    <ul class="guide__list">
+                        <li class="guide__item">
+                            <span
+                                class="guide__number guide__number--acquirers"
+                            >
+                                1
+                            </span>
+                            <div class="guide__content">
+                                <h4 class="guide__content-title">
+                                    Explore os itens
+                                </h4>
+                                <p class="guide__content-description">
+                                    Navegue pelos eletrônicos disponíveis
+                                </p>
                             </div>
                         </li>
-                        <li>
-                            <span class="circle-number">2</span>
-                            <div>
-                                <h4>Demonstre interesse</h4>
-                                <p>Clique em "Tenho interesse" no item</p>
+                        <li class="guide__item">
+                            <span
+                                class="guide__number guide__number--acquirers"
+                            >
+                                2
+                            </span>
+                            <div class="guide__content">
+                                <h4 class="guide__content-title">
+                                    Demonstre interesse
+                                </h4>
+                                <p class="guide__content-description">
+                                    Clique em "Tenho interesse" no item
+                                </p>
                             </div>
                         </li>
-                        <li>
-                            <span class="circle-number">3</span>
-                            <div>
-                                <h4>Receba seu novo gadget</h4>
-                                <p>Combine com o doador e seja feliz!</p>
+                        <li class="guide__item">
+                            <span
+                                class="guide__number guide__number--acquirers"
+                            >
+                                3
+                            </span>
+                            <div class="guide__content">
+                                <h4 class="guide__content-title">
+                                    Receba seu novo gadget
+                                </h4>
+                                <p class="guide__content-description">
+                                    Combine com o doador e seja feliz!
+                                </p>
                             </div>
                         </li>
                     </ul>
                 </article>
+            </section>
+
+            <section class="products">
+                <h2 class="title products__title">Produtos disponíveis</h2>
+                <h3 class="subtitle products__subtitle">
+                    Categorias mais populares
+                </h3>
+
+                <div class="product__list">
+                    <article class="product">
+                        <figure class="product__figure">
+                            <img
+                                class="product__image"
+                                src="assets/images/fones.png"
+                                alt="Fones"
+                            />
+                            <figcaption class="product__description">
+                                <h3 class="product__title">Fones</h3>
+                                <p class="product__details">
+                                    Fones em ótimo estado, prontos pra uso.
+                                </p>
+                                <button class="btn btn--small">
+                                    Quero adquirir
+                                </button>
+                            </figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="product">
+                        <figure class="product__figure">
+                            <img
+                                class="product__image"
+                                src="assets/images/notebooks.png"
+                                alt="Notebooks"
+                            />
+                            <figcaption class="product__description">
+                                <h3 class="product__title">Notebooks</h3>
+                                <p class="product__details">
+                                    Notebooks funcionando direitinho, prontos
+                                    pra você usar.
+                                </p>
+                                <button class="btn btn--small">
+                                    Quero adquirir
+                                </button>
+                            </figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="product">
+                        <figure class="product__figure">
+                            <img
+                                class="product__image"
+                                src="assets/images/smartphones.png"
+                                alt="Smartphones"
+                            />
+                            <figcaption class="product__description">
+                                <h3 class="product__title">Smartphones</h3>
+                                <p class="product__details">
+                                    Celulares em ótimo estado, prontos pra uma
+                                    nova jornada.
+                                </p>
+                                <button class="btn btn--small">
+                                    Quero adquirir
+                                </button>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
             </section>
         </main>
     </body>

@@ -34,11 +34,22 @@ ul {
   list-style: none;
 }
 
-button {
+.title {
+  font-size: 32px;
+  color: var(--title-color);
+}
+
+.subtitle {
+  font-size: 22px;
+  font-family: var(--secondary-font);
+  color: var(--subtitle-color);
+  font-weight: 400;
+}
+
+.btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   width: 100%;
   max-width: 190px;
   height: 60px;
@@ -49,57 +60,73 @@ button {
   border-radius: 6px;
   padding: 10px;
   cursor: pointer;
-}
-
-.btn-primary {
-  background-color: var(--primary-button-color);
-  color: var(--light-text-color);
   transition: all 0.2s;
 }
-.btn-primary:hover {
-  background-color: var(--primary-button-color-hover);
+
+.btn--primary {
+  background-color: var(--primary-button-color);
+  color: var(--light-text-color);
 }
 
-.btn-secondary {
+.btn--secondary {
   color: var(--number-circle-color);
   border: 1px solid var(--number-circle-color);
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
+.btn--small {
+  max-width: 150px;
+  height: 38px;
+  font-size: 14px;
+  font-family: var(--secondary-font);
+  background-color: var(--primary-button-color);
+  color: var(--light-text-color);
 }
 
-header {
+.btn--medium {
+  height: 44px;
+}
+
+.btn--primary:hover,
+.btn--small:hover {
+  background-color: var(--primary-button-color-hover);
+}
+
+.btn__icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+
+.header {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 32px 12px;
 }
-header .logo {
+.header .logo {
   color: var(--title-color);
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
 }
-header .logo img {
+.header .logo__image {
   width: 36px;
   height: 36px;
 }
-header .nav-container {
+.header .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
 }
-header .nav-list {
+.header .nav__list {
   display: flex;
   gap: 14px;
 }
-header .line {
+.header__line {
   width: 100%;
   height: 1px;
   background-color: var(--line-color);
@@ -118,27 +145,69 @@ main {
   gap: 16px;
   padding: 0 12px;
 }
-.hero h1 {
-  font-size: 38px;
-  color: var(--title-color);
-}
-.hero h4 {
+.hero__description {
   font-family: var(--secondary-font);
+  color: var(--subtitle-color);
   font-size: 20px;
   font-weight: 400;
 }
-.hero .buttons-container {
+.hero .hero__button-group {
   display: flex;
   justify-content: center;
   width: 100%;
   gap: 10px;
 }
-.hero .recicla-image {
+.hero .hero__image {
   width: 100%;
   max-width: 412px;
 }
 
-.circle-number {
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  background-color: var(--box-background-color);
+  text-align: center;
+  padding: 48px 20px;
+}
+.stats .stats__number {
+  color: var(--primary-button-color);
+  margin-bottom: 4px;
+}
+
+.how-it-works {
+  padding: 0 12px;
+}
+.how-it-works .how-it-works__title {
+  margin-bottom: 16px;
+}
+.how-it-works .how-it-works__subtitle {
+  color: var(--title-color);
+  margin-bottom: 32px;
+}
+.how-it-works .guide {
+  background-color: var(--box-background-color);
+  border-radius: 8px;
+  padding: 28px 20px;
+}
+.how-it-works .guide__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.how-it-works .guide__title--donors {
+  color: var(--primary-button-color);
+}
+.how-it-works .guide__title--acquirers {
+  color: var(--number-circle-color);
+}
+.how-it-works .guide__description {
+  margin-bottom: 32px;
+}
+.how-it-works .guide__number {
   width: 32px;
   height: 32px;
   display: flex;
@@ -150,80 +219,57 @@ main {
   font-weight: 700;
   flex-shrink: 0;
 }
-
-.stats {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  background-color: var(--box-background-color);
-  text-align: center;
-  padding: 32px 20px;
+.how-it-works .guide__number--donors {
+  background-color: var(--primary-button-color);
 }
-.stats h2 {
-  font-size: 32px;
-  color: var(--primary-button-color);
-  margin-bottom: 12px;
+.how-it-works .guide__number--acquirers {
+  background-color: var(--number-circle-color);
 }
-
-.how-it-works {
-  padding: 0 12px;
-}
-.how-it-works h2 {
-  color: var(--title-color);
-  font-size: 32px;
-  margin-bottom: 16px;
-}
-.how-it-works h3 {
-  font-family: var(--secondary-font);
-  font-weight: 400;
-  font-size: 22px;
-  margin-bottom: 32px;
-}
-.how-it-works p {
-  margin-bottom: 32px;
-}
-.how-it-works .card-how-it-works {
-  background-color: var(--box-background-color);
-  border-radius: 8px;
-  padding: 28px 20px;
-}
-.how-it-works .card-how-it-works .title-how-it-works {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 32px;
-}
-.how-it-works .card-how-it-works .title-how-it-works h3 {
-  margin: 0;
-}
-.how-it-works .card-how-it-works ul {
+.how-it-works .guide__list {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.how-it-works .card-how-it-works ul li {
+.how-it-works .guide__item {
   display: flex;
   gap: 10px;
 }
-.how-it-works .card-how-it-works ul .circle-number {
-  margin-bottom: 4px;
+.how-it-works .guide--acquirers {
+  margin-top: 32px;
 }
-.how-it-works .card-how-it-works ul p {
-  margin: 0;
+
+.products {
+  text-align: center;
+  background-color: var(--box-background-color);
+  padding: 0 12px;
 }
-.how-it-works .donors {
-  margin-bottom: 32px;
+.products__subtitle {
+  margin: 16px 0;
 }
-.how-it-works .donors h3 {
-  color: var(--primary-button-color);
+.products .product__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin: 48px 0;
 }
-.how-it-works .donors .circle-number {
-  background-color: var(--primary-button-color);
+.products .product {
+  width: 100%;
+  max-width: 300px;
+  background-color: var(--light-text-color);
+  border-radius: 8px;
+  border: 2px solid var(--primary-button-color);
 }
-.how-it-works .acquirers h3 {
-  color: var(--number-circle-color);
+.products .product__image {
+  width: 100%;
+  height: 234px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.how-it-works .acquirers .circle-number {
-  background-color: var(--number-circle-color);
+.products .product__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
 }/*# sourceMappingURL=style.css.map */
