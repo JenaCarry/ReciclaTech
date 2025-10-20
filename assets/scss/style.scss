@@ -40,9 +40,16 @@ ul {
     list-style: none;
 }
 
+.divisor {
+    width: 100%;
+    height: 1px;
+    background-color: var(--line-color);
+}
+
 .title {
     font-size: 32px;
     color: var(--title-color);
+    margin-bottom: 16px;
 }
 
 .subtitle {
@@ -50,6 +57,14 @@ ul {
     font-family: var(--secondary-font);
     color: var(--subtitle-color);
     font-weight: 400;
+    margin-bottom: 32px;
+}
+
+.button__group {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
 }
 
 .btn {
@@ -103,25 +118,31 @@ ul {
     margin-left: 8px;
 }
 
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--title-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 700;
+
+    &__image {
+        width: 36px;
+        height: 36px;
+    }
+}
+
 .header {
     display: flex;
     flex-direction: column;
     gap: 12px;
     padding: 32px 12px;
-
-    .logo {
-        color: var(--title-color);
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 28px;
-        font-weight: 700;
-
-        &__image {
-            width: 36px;
-            height: 36px;
-        }
-    }
 
     .nav {
         display: flex;
@@ -135,18 +156,12 @@ ul {
             gap: 14px;
         }
     }
-
-    &__line {
-        width: 100%;
-        height: 1px;
-        background-color: var(--line-color);
-    }
 }
 
 main {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 4rem;
 }
 
 .hero {
@@ -161,13 +176,6 @@ main {
         color: var(--subtitle-color);
         font-size: 20px;
         font-weight: 400;
-    }
-
-    .hero__button-group {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        gap: 10px;
     }
 
     .hero__image {
@@ -193,18 +201,18 @@ main {
 }
 
 .how-it-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0 12px;
-
-    .how-it-works__title {
-        margin-bottom: 16px;
-    }
 
     .how-it-works__subtitle {
         color: var(--title-color);
-        margin-bottom: 32px;
     }
 
     .guide {
+        width: 100%;
+        max-width: 491px;
         background-color: var(--box-background-color);
         border-radius: 8px;
         padding: 28px 20px;
@@ -224,10 +232,6 @@ main {
             color: var(--number-circle-color);
         }
 
-        &__description {
-            margin-bottom: 32px;
-        }
-
         &__number {
             width: 32px;
             height: 32px;
@@ -239,6 +243,10 @@ main {
             font-size: 14px;
             font-weight: 700;
             flex-shrink: 0;
+        }
+
+        &__content-description {
+            color: var(--subtitle-color);
         }
 
         &__number--donors {
@@ -269,7 +277,7 @@ main {
 .products {
     text-align: center;
     background-color: var(--box-background-color);
-    padding: 0 12px;
+    padding: 48px 12px;
 
     &__subtitle {
         margin: 16px 0;
@@ -284,11 +292,17 @@ main {
     }
 
     .product {
+        display: flex;
         width: 100%;
         max-width: 300px;
         background-color: var(--light-text-color);
         border-radius: 8px;
         border: 2px solid var(--primary-button-color);
+
+        &__figure {
+            display: flex;
+            flex-direction: column;
+        }
 
         &__image {
             width: 100%;
@@ -300,8 +314,159 @@ main {
             display: flex;
             flex-direction: column;
             align-items: center;
+            flex: 1;
             gap: 16px;
             padding: 20px;
+            margin-bottom: 16px;
         }
+
+        .btn {
+            margin-top: auto;
+        }
+    }
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+
+    &__title,
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    &__item {
+        width: 100%;
+        max-width: 338px;
+        border: 1px solid #9ca3af;
+        border-left: 4px solid #9ca3af;
+        border-radius: 8px;
+        padding: 28px;
+    }
+
+    &__star {
+        width: 100%;
+        max-width: 120px;
+        margin: 16px 0;
+    }
+
+    &__text {
+        margin-bottom: 28px;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        font-family: var(--secondary-font);
+        color: #09090b;
+    }
+
+    &__role {
+        color: var(--subtitle-color);
+    }
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 12px;
+    text-align: center;
+
+    &__subtitle {
+        color: var(--title-color);
+    }
+
+    .btn--secondary {
+        border-color: var(--primary-button-color);
+        color: var(--primary-button-color);
+    }
+
+    .button__group {
+        flex-wrap: wrap;
+    }
+}
+
+.footer {
+    color: var(--light-text-color);
+    background-color: var(--title-color);
+    padding: 32px 12px;
+
+    &__brand {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .logo {
+        color: var(--light-text-color);
+    }
+
+    &__tagline,
+    &__link,
+    &__text {
+        color: #9ca3af;
+    }
+
+    &__columns {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 32px;
+        padding: 48px 20px;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 14px;
+        width: 100%;
+        max-width: 170px;
+    }
+
+    &__column--large {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 14px;
+        width: 100%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &__social {
+        display: flex;
+        gap: 10px;
+    }
+
+    .divisor {
+        background-color: #4b5563;
+    }
+
+    &__copyright {
+        margin-top: 32px;
+        text-align: center;
     }
 }
