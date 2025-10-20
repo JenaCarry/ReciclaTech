@@ -212,9 +212,11 @@ main {
 }
 .how-it-works .guide__title--donors {
   color: var(--primary-button-color);
+  margin: 0;
 }
 .how-it-works .guide__title--acquirers {
   color: var(--number-circle-color);
+  margin: 0;
 }
 .how-it-works .guide__number {
   width: 32px;
