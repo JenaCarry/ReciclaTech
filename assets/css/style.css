@@ -401,6 +401,9 @@ main {
 .footer__tagline, .footer__link, .footer__text {
   color: #9ca3af;
 }
+.footer__link:hover {
+  color: var(--box-background-color);
+}
 .footer__columns {
   display: flex;
   flex-direction: column;

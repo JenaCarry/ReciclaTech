@@ -454,6 +454,10 @@ main {
         color: #9ca3af;
     }
 
+    &__link:hover {
+        color: var(--box-background-color);
+    }
+
     &__columns {
         display: flex;
         flex-direction: column;
